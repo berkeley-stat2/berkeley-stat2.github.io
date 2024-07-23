@@ -17,7 +17,7 @@ def file_exists(filename):
     """argparse helper to check that input file exists."""
     file_path = Path(filename)
     if not file_path.is_file():
-        raise argparse.ArgumentTypeError(f"File '{filename}' does not exist.")
+        return False
     return filename
 
 
